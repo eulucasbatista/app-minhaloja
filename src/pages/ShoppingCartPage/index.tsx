@@ -120,7 +120,7 @@ export const ShoppingCartPage = () => {
         {shoppingCart.map((item) => (
           <li>
             <p>Produto: {item.product.nome}</p>
-            <p>Price: {item.product.preco}</p>
+            <p>Preço: {item.product.preco}</p>
             <p>Quantidade: {item.quantity}</p>
             <p>Total: R$:{(item.quantity * item.product.preco).toFixed(2)}</p>
             <button onClick={() => handleRemoveFromCart(item.product.id)}>
