@@ -1,0 +1,122 @@
+/* Estilos para a lista de produtos */
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  li {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    width: calc((100% / 3) - 20px);
+  }
+  
+  li p {
+    margin: 0;
+  }
+  
+  li img {
+    max-width: 100%;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Estilos para o carrinho de compras */
+  .cart {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 20px 0;
+  }
+  
+  .cart p {
+    margin: 0;
+  }
+  
+  .cart ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .cart li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  
+  .cart li p {
+    margin-right: 10px;
+  }
+  
+  .cart li button {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .cart li button:hover {
+    background-color: #da190b;
+  }
+  
+  /* Estilos para o botão de finalizar compra */
+  .checkout {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .checkout button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
+  .checkout button:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Estilos para o valor total */
+  .total {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    /* Estilos para a lista de produtos */
+    ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    li {
+      width: 100%;
+    }
+  
+    /* Estilos para o carrinho de compras */
+    .cart li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
