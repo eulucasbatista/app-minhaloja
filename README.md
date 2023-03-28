@@ -22,7 +22,7 @@ json-server --watch dbteste.json --port 3001
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-And Open [http://localhost:3001](http://localhost:3001) with your browser to see the list prodcuts in json.
+And open [http://localhost:3001](http://localhost:3001) with your browser to see the list prodcuts in json.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
