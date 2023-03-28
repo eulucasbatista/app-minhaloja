@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-interface IProdutos{
+interface IProdutos {
   id: number;
   nome: string;
   descricao: string;
@@ -19,14 +19,14 @@ interface IShoppingCartItem {
 export const ShoppingCartPage = () => {
   const [shoppingCart, setShoppingCart] = useState<IShoppingCartItem[]>([]);
   const [produtos, setProdutos] = useState<IProdutos[]>([]);
-  const [menssagem, setMenssagem]  = useState()
+  const [menssagem, setMenssagem] = useState()
   useEffect(() => {
-    fetch('http://localhost:3001/produtos',{
+    fetch('http://localhost:3001/produtos', {
       method: 'GET',
       headers: {
         'Accept': 'application/json'
       }
-      }) .then((response) => response.json())
+    }).then((response) => response.json())
       .then((data) => setProdutos(data))
       .catch((error) => console.log(error));
   }, []);
@@ -87,11 +87,11 @@ export const ShoppingCartPage = () => {
     setShoppingCart([]);
   };
 
- const handleCheckoutCart = () => {
-  setShoppingCart([]);
-  setMenssagem("Parabéns Compra Finalizada!");
+  const handleCheckoutCart = () => {
+    setShoppingCart([]);
+    setMenssagem("Parabéns Compra Finalizada!");
 
- } 
+  }
 
   const totalCart = shoppingCart.reduce((total, current) => {
     return total + current.product.preco * current.quantity;
