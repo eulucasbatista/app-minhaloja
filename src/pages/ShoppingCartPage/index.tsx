@@ -20,6 +20,7 @@ export const ShoppingCartPage = () => {
   const [shoppingCart, setShoppingCart] = useState<IShoppingCartItem[]>([]);
   const [produtos, setProdutos] = useState<IProdutos[]>([]);
   const [menssagem, setMenssagem] = useState()
+  
   useEffect(() => {
     fetch('http://localhost:3001/produtos', {
       method: 'GET',
